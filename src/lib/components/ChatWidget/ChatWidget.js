@@ -18,7 +18,7 @@ class ChatWidget extends React.PureComponent {
   render() {
     const {isOpen} = this.state;
     return (
-      <div className={`hchat-widget ${isOpen ? 'opened' : ''}`}>
+      <div className={`react-chat-widget ${isOpen ? 'opened' : ''}`}>
         <div className="--bubble" onClick={this.toggleOpen}>
           {
             isOpen && <img src={iconClose} className="img-close" alt="Close"/>

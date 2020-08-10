@@ -20,11 +20,11 @@ const ChatBox = React.memo(function ChatWidget({conversationId, title, messages,
   };
 
   return (
-    <div className="hchat-box">
-      <div className="hchat-box-header">
+    <div className="react-chat-box">
+      <div className="react-chat-box-header">
         <div className="--title">Chat box</div>
       </div>
-      <div className="hchat-box-content">
+      <div className="react-chat-box-content">
         {
           !!messages?.length &&
           messages.map((item, index) => (
@@ -32,7 +32,7 @@ const ChatBox = React.memo(function ChatWidget({conversationId, title, messages,
           ))
         }
       </div>
-      <div className="hchat-box-footer">
+      <div className="react-chat-box-footer">
         <textarea
           value={message}
           placeholder="Write message..."

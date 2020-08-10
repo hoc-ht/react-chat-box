@@ -1,5 +1,5 @@
 {
-  "name": "@hoc-ht/hchat",
+  "name": "@hoc-ht/react-chat-box",
   "version": "0.1.0",
   "private": false,
   "author": "Hoang Thai Hoc (https://github.com/hoc-ht)",
@@ -51,6 +51,6 @@
   "peerDependencies": {
     "react": ">=16.3.0"
   },
-  "description": "A simple ReactJS chat library.",
+  "description": "A simple ReactJS chat box library.",
   "license": "MIT"
 }
