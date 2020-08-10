@@ -1,5 +1,7 @@
-import ChatWidgets from './components/ChatWidgets';
+import ChatWidget from './components/ChatWidget/ChatWidget';
+import ChatBox from './components/ChatBox/ChatBox';
 
 export {
-  ChatWidgets,
+  ChatBox,
+  ChatWidget,
 };

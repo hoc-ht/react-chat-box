@@ -17,6 +17,7 @@
     "url": "https://github.com/hoc-ht/hchat/issues"
   },
   "dependencies": {
+    "prop-types": "^15.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,6 +43,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"

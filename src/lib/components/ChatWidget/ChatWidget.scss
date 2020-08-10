@@ -1,0 +1,68 @@
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hchat-widget {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1300;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .--bubble {
+    background-color: #2E92FF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .img-close {
+      width: 24px;
+      height: 24px;
+    }
+
+    .img-message {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .--chat-window {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 68px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  }
+
+  &.opened {
+    .--chat-window {
+      opacity: 1;
+      height: calc(100vh - 120px);
+      width: 370px;
+      animation: zoomIn 0.3s ease-in-out;
+    }
+  }
+}
