@@ -27,14 +27,6 @@
     flex: 1;
     overflow-x: hidden;
     overflow-y: auto;
-    .react-chat-message {
-      &:first-child {
-        padding-top: 10px;
-      }
-      &:last-child {
-        padding-bottom: 10px;
-      }
-    }
   }
 
   .react-chat-box-footer {

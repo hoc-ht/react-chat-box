@@ -34,18 +34,30 @@ class App extends React.PureComponent {
 
   handleSendMessage = (conversationId, message) => {
     return new Promise((resolve) => {
-      this.setState(prevState => ({
-        messages: [
+      this.setState(prevState => {
+        const messages = [
           ...prevState.messages,
-          {
-            type: 'text',
-            author: 'me',
-            data: {
-              text: message,
-            }
+        ].map(item => {
+          if (item.isNew) {
+            return {
+              ...item,
+              isNew: false,
+            };
           }
-        ]
-      }), () => {
+          return item;
+        });
+        messages.push({
+          type: 'text',
+          author: 'me',
+          data: {
+            text: message,
+          },
+          isNew: true,
+        });
+        return {
+          messages,
+        };
+      }, () => {
         resolve();
       });
     });

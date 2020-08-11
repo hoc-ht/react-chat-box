@@ -1,11 +1,11 @@
 .react-chat-message {
   display: flex;
-  padding: 5px 10px;
+  padding: 8px 10px;
   .--message-text {
     padding: 10px;
     border-radius: 8px;
     background-color: #f4f7f9;
-    max-width: calc(100% - 120px);
+    max-width: calc(100% - 100px);
   }
 
   &.--me {

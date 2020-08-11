@@ -1,9 +1,9 @@
 import React from 'react';
 import './ChatBox.scss';
 import SendIcon from '../icons/SendIcon';
-import ChatMessage from '../ChatMessage/ChatMessage';
+import ListMessages from '../ListMessages/ListMessages';
 
-const ChatBox = React.memo(function ChatWidget({conversationId, title, messages, handleSendMessage}) {
+const ChatBox = React.memo(function ChatWidget({conversationId, conversationTitle, messages, handleSendMessage}) {
   const [message, setMessage] = React.useState('');
 
   const handleKeyDown = event => {
@@ -22,15 +22,10 @@ const ChatBox = React.memo(function ChatWidget({conversationId, title, messages,
   return (
     <div className="react-chat-box">
       <div className="react-chat-box-header">
-        <div className="--title">Chat box</div>
+        <div className="--title">{conversationTitle}</div>
       </div>
       <div className="react-chat-box-content">
-        {
-          !!messages?.length &&
-          messages.map((item, index) => (
-            <ChatMessage message={item} key={index}/>
-          ))
-        }
+        <ListMessages messages={messages}/>
       </div>
       <div className="react-chat-box-footer">
         <textarea

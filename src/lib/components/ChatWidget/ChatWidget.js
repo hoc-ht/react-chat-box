@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ChatWidget.scss';
 import iconMessage from '../../assets/images/icon-message.svg';
 import iconClose from '../../assets/images/icon-close.png';
@@ -37,5 +38,11 @@ class ChatWidget extends React.PureComponent {
     );
   }
 }
+
+ChatWidget.propTypes = {
+  conversations: PropTypes.array,
+  messages: PropTypes.array,
+  handleSendMessage: PropTypes.func,
+};
 
 export default ChatWidget;
